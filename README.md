@@ -3,10 +3,9 @@
 
 
 
-## Nginx RTMP Module Configuration
-https://github.com/arut/nginx-rtmp-module/wiki/Directives
 
-## RUN
+
+# RUN
 ```bash
 git clone 
 docker-compose build
@@ -17,7 +16,7 @@ open localhost:8080/index.html to see streaming HLS content
 
 
 
-## Live streaming clients
+# Live streaming clients
 
 rtmp://[host_name]/live/[stream_name]
 
@@ -26,8 +25,8 @@ rtmp://[host_name]/live/[stream_name]
 ### Android
 
 
-
-
+# Nginx RTMP Module Configuration
+https://github.com/arut/nginx-rtmp-module/wiki/Directives
 # Protochol related
 ## DASH v.s HLS
 
