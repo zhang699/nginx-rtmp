@@ -1,18 +1,14 @@
 
-
-
-
-
-
-
-# RUN
+RUN
+---
 ```bash
 git clone 
 docker-compose build
 docker-compose up
 ```
-## See HLS Content
-Uncomment HTL configuration below lines and if you want to see from localhost:8080/index.html
+See HLS Content
+---
+Uncomment HTL configuration in nginx.conf  below lines and re-type ```docker-compose up```and you can see content in localhost:8080/index.html
 
 ```
     #hls on;
@@ -29,16 +25,14 @@ Use one of following Live streaming subscriber to see the streaming content from
 rtmp://[host_name]/live/[stream_name]
 
 ## Publisher
-### OBS
-
-### Android
+[OBS](https://obsproject.com/)
+[Android](https://github.com/begeekmyfriend/yasea)
 
 ## Subscriber
 
-### Wowza RTMP Test Player
-> https://www.wowza.com/testplayers
-### Android
-> Use [Vitamio](https://github.com/yixia/VitamioBundle) Video View to display 
+[Wowza RTMP Test Player](https://www.wowza.com/testplayers)
+
+[Vitamio for Android](https://github.com/yixia/VitamioBundle)
 
 
 # Nginx RTMP Module Configuration
@@ -48,23 +42,17 @@ https://github.com/arut/nginx-rtmp-module/wiki/Directives
 # TODO
 - [ ] (Need study) Use WebRTC's codec to streaming to RTMP server which we can make react-native-webrtc to unify the client platform.
 
-
 # Protochol related
 
-## Latency comparsion between RTMP/HLS/DASH/WebRTC
+[Latency comparsion among RTMP/HLS/DASH/WebRTC](https://www.nanocosmos.de/blog/2017/05/interactive-live-streaming-with-ultra-low-latency-2/)
 
-https://www.nanocosmos.de/blog/2017/05/interactive-live-streaming-with-ultra-low-latency-2/
+[RTMP Latency](https://github.com/arut/nginx-rtmp-module/issues/962)
 
-## RTMP Latency
 
-https://github.com/arut/nginx-rtmp-module/issues/962
+[HLS Latency]()
 
-## HLS Latency
-- Decrease the video bitrate of client side can shorten latency
 
-## DASH v.s HLS
-
-> https://stackoverflow.com/questions/15687434/what-is-the-difference-between-hls-and-mpeg-dash
+[DASH v.s HLS](https://stackoverflow.com/questions/15687434/what-is-the-difference-between-hls-and-mpeg-dash)
 
 
 ## References
