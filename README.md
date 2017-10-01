@@ -11,10 +11,18 @@ git clone
 docker-compose build
 docker-compose up
 ```
-open localhost:8080/index.html to see streaming HLS content or use one of following Live streaming subscriber to see the streaming content
+## See HLS Content
+Uncomment HTL configuration below lines and if you want to see from localhost:8080/index.html
 
+```
+    #hls on;
+    #hls_path /etc/nginx/hls/;
+    #hls_fragment 3;
+    #hls_playlist_length 60;
+```
 
-
+## See RTMP Content
+Use one of following Live streaming subscriber to see the streaming content from RTMP
 
 # Live streaming publisher and subscribers
 
@@ -42,6 +50,10 @@ https://github.com/arut/nginx-rtmp-module/wiki/Directives
 
 
 # Protochol related
+
+## Latency comparsion between RTMP/HLS/DASH/WebRTC
+
+https://www.nanocosmos.de/blog/2017/05/interactive-live-streaming-with-ultra-low-latency-2/
 
 ## RTMP Latency
 
