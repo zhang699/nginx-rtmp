@@ -6,7 +6,7 @@ git clone
 docker-compose build
 docker-compose up
 ```
-Comment following line if you want to publish without validating with your app server
+Comment following line in ```nginx.conf``` if you want to publish without validating with your app server
 ```
 on_publish http://docker.for.mac.localhost:10010/hooks/publish/start; //use docker.for.mac.localhost to communicate to localhost outside container
 on_publish_done http://docker.for.mac.localhost:10010/hooks/publish/start/stop;
