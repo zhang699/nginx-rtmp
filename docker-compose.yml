@@ -1,12 +1,15 @@
-web:
-  build: .
-  container_name: "nginx-rtmp"
-  volumes:
-   - ./nginx.conf:/etc/nginx/nginx.conf:ro
-   - ./stat:/etc/nginx/stat
-   - ./site:/etc/nginx/site
-   - ./hls:/etc/nginx/hls
-  ports:
-   - "80:80"
-   - "8080:8080"
-   - "1935:1935"
+version: "2.2"
+services:
+  web:
+    build: .
+    container_name: "nginx-rtmp"
+    volumes:
+    - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    - ./stat:/etc/nginx/stat
+    - ./site:/etc/nginx/site
+    - ./hls:/etc/nginx/hls
+    ports:
+    - "80:80"
+    - "8080:8080"
+    - "1935:1935"
+    #network_mode: host //use it in Linux
