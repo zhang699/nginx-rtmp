@@ -12,24 +12,23 @@ Comment following line in `nginx.conf` if you want to publish without validating
 on_publish http://docker.for.mac.localhost:10010/hooks/publish/start; //use docker.for.mac.localhost to communicate to localhost outside container
 on_publish_done http://docker.for.mac.localhost:10010/hooks/publish/start/stop;
 
-Or Use
-```
+//or use
 
 on_publish http://<YOUR_PUBLISH_ENDPOINT>;
 on_publish_done http://<YOUR_PUBLISH_DONE_ENDPOINT>;
-
 ```
+
 ## See HLS Content
 
 Uncomment HTL configuration in nginx.conf below lines and re-type `docker-compose up`and you can see content in localhost:8080/index.html
-```
 
+```
     #hls on;
     #hls_path /etc/nginx/hls/;
     #hls_fragment 3;
     #hls_playlist_length 60;
-
 ```
+
 ## See RTMP Content
 
 Use one of following Live streaming subscriber to see the streaming content from RTMP
@@ -68,4 +67,7 @@ https://github.com/arut/nginx-rtmp-module/wiki/Directives
 ## References
 
 https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/
+
+```
+
 ```
